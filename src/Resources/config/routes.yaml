@@ -1,0 +1,5 @@
+responseFilterController:
+    resource:
+        path: ../../Controller/
+        namespace: ResponseFilterBundle\Controller
+    type: attribute

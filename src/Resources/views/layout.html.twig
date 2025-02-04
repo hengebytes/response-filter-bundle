@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block page_head %}
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <title>{% block page_title %}{{'title.response_filter.index'|trans([], 'bookingEngine')}}{% endblock %}</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="robots" content="noindex, nofollow"/>
+    {% endblock %}
+    {% block head_css %}
+        <link href="{{ absolute_url(asset('bundles/responsefilter/css/bootstrap.css')) }}" rel="stylesheet"/>
+        <link href="{{ absolute_url(asset('bundles/responsefilter/css/helpers.css')) }}" rel="stylesheet"/>
+    {% endblock %}
+</head>
+<body>
+{% block content %}
+    {% if action is defined and action == "response_filter_index" %}
+        {{ include('@ResponseFilter/index.html.twig') }}
+    {% elseif action is defined and action == "response_filter_create" %}
+        {{ include('@ResponseFilter/create.html.twig') }}
+    {% elseif action is defined and action == "response_filter_update" %}
+        {{ include('@ResponseFilter/update.html.twig') }}
+    {% endif %}
+{% endblock %}
+{% block footer_js %}
+{% endblock %}
+</body>
+</html>

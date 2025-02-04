@@ -1,0 +1,83 @@
+<body>
+<div class="bootstrap-wrapper">
+    <h2 class="h3 u-margin-t-m">Response filter rules</h2>
+
+    {% if entities|length > 0 %}
+        <table class="table table-bordered table-hover">
+            <thead>
+            <tr>
+                <th>Service</th>
+                <th>Action</th>
+                <th>Type</th>
+                <th>
+                    Condition
+                    <br>
+                    <small>(key/../key/fieldName(= /< />)fieldValue)</small>
+                    <br>
+                    <small>(key/../key/fieldName=["fieldValue1", "fieldValue1", ...])</small>
+                </th>
+                <th>
+                    Field
+                    <br>
+                    <small>(mainField/../subField/fieldName)</small>
+                    <br>
+                    <small>(fieldName)</small>
+                    <br>
+                    <small>(Start next after * in condition)</small>
+                </th>
+                <th>
+                    Value
+                    <br>
+                    <small>{"from":"to", "from1":"to1", ...}</small>
+                    <br>
+                    <small>from=to</small>
+                    <br>
+                    <small>from=>to</small>
+                </th>
+                <th class="col-md-2">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for entity in entities %}
+                <tr>
+                    <td>{{ entity.service }}{{ entity.subService ? ' - ' ~ entity.subService : '' }}</td>
+                    <td>{{ entity.action }}</td>
+                    <td>{{ entity.type.name }}</td>
+                    <td style="word-break: break-all">{{ entity.condition }}</td>
+                    <td>{{ entity.field }}</td>
+                    <td>{{ entity.value }}</td>
+                    <td>
+                        <p class="btn-group" role="group">
+                            <a class="btn btn-warning btn-sm"
+                               href="{{ path('response_filter_rule_update', {'id': entity.id}) }}"
+                               title="Edit" role="button">
+                                <i class="glyphicon glyphicon-edit"></i>
+                            </a>
+                            <a class="btn btn-danger btn-sm"
+                               href="{{ path('response_filter_rule_delete', {'id': entity.id}) }}"
+                               title="Remove" role="button">
+                                <i class="glyphicon glyphicon-ban-circle"></i>
+                            </a>
+                        </p>
+                        <p class="btn-group" role="group">
+                            <a class="btn btn-primary btn-sm"
+                               href="{{ path('response_filter_rule_copy', {'id': entity.id}) }}"
+                               title="Copy" role="button">
+                                <i class="glyphicon glyphicon-share"></i>
+                            </a>
+                        </p>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>There are no items yet</p>
+    {% endif %}
+    <p>
+        <a class="btn btn-success" href="{{ path('response_filter_rule_create') }}">
+            Create
+        </a>
+    </p>
+</div>
+</body>

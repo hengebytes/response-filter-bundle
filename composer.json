@@ -1,0 +1,30 @@
+{
+    "name": "hengebytes/response-filter-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony bundle for modify/filter responses in webservice-core-async-bundle",
+    "keywords": [
+        "API",
+        "Response filter",
+        "Response modify",
+        "webservice-core-async-bundle",
+        "Symfony",
+        "Bundle"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": ">=8.3",
+        "symfony/dependency-injection": "^6.4 || ^7.0",
+        "doctrine/orm": "^3.0",
+        "symfony/orm-pack": "^2.4",
+        "symfony/webservice-core-async-bundle": "*"
+    },
+    "suggest": {
+        "symfony/routing": "For have default view for manage filters rules",
+        "symfony/twig-bundle": "For have default view for manage filters rules"
+    },
+    "autoload": {
+        "psr-4": {
+            "ResponseFilterBundle\\": "src/"
+        }
+    }
+}
