@@ -1,6 +1,6 @@
 <?php
 
-namespace ResponseFilterBundle\Enum;
+namespace Hengebytes\ResponseFilterBundle\Enum;
 
 enum ResponseFilterRuleTypeEnum: int
 {

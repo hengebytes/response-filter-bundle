@@ -1,10 +1,10 @@
 <?php
 
-namespace ResponseFilterBundle\Handler;
+namespace Hengebytes\ResponseFilterBundle\Handler;
 
-use ResponseFilterBundle\Entity\ResponseFilterRule;
-use ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
-use WebserviceCoreAsyncBundle\Response\ParsedResponse;
+use Hengebytes\ResponseFilterBundle\Entity\ResponseFilterRule;
+use Hengebytes\ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
+use Hengebytes\WebserviceCoreAsyncBundle\Response\ParsedResponse;
 use Doctrine\ORM\EntityManagerInterface;
 
 class ResponseFilterHandler

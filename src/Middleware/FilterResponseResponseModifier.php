@@ -1,12 +1,12 @@
 <?php
 
-namespace ResponseFilterBundle\Middleware;
+namespace Hengebytes\ResponseFilterBundle\Middleware;
 
-use ResponseFilterBundle\Handler\ResponseFilterHandler;
-use WebserviceCoreAsyncBundle\Callback\OnResponseReceivedCallback;
-use WebserviceCoreAsyncBundle\Middleware\ResponseModificationInterface;
-use WebserviceCoreAsyncBundle\Response\AsyncResponse;
-use WebserviceCoreAsyncBundle\Response\ParsedResponse;
+use Hengebytes\ResponseFilterBundle\Handler\ResponseFilterHandler;
+use Hengebytes\WebserviceCoreAsyncBundle\Callback\OnResponseReceivedCallback;
+use Hengebytes\WebserviceCoreAsyncBundle\Middleware\ResponseModificationInterface;
+use Hengebytes\WebserviceCoreAsyncBundle\Response\AsyncResponse;
+use Hengebytes\WebserviceCoreAsyncBundle\Response\ParsedResponse;
 
 class FilterResponseResponseModifier implements ResponseModificationInterface
 {

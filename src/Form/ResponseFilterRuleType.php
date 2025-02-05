@@ -1,9 +1,9 @@
 <?php
 
-namespace ResponseFilterBundle\Form;
+namespace Hengebytes\ResponseFilterBundle\Form;
 
-use ResponseFilterBundle\Entity\ResponseFilterRule;
-use ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
+use Hengebytes\ResponseFilterBundle\Entity\ResponseFilterRule;
+use Hengebytes\ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EnumType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;

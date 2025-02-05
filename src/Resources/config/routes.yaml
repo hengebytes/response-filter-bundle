@@ -1,5 +1,5 @@
 responseFilterController:
     resource:
         path: ../../Controller/
-        namespace: ResponseFilterBundle\Controller
+        namespace: Hengebytes\ResponseFilterBundle\Controller
     type: attribute

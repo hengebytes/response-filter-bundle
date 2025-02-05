@@ -3,12 +3,12 @@ services:
         autowire: true
         autoconfigure: true
 
-    ResponseFilterBundle\:
+    Hengebytes\ResponseFilterBundle\:
         resource: '../../'
         exclude:
             - '../../DependencyInjection/'
             - '../../Entity/'
             - '../../Resources/'
-            - '../../ResponseFilterBundle.php'
+            - '../../HBResponseFilterBundle.php'
 
 

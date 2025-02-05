@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ResponseFilterBundle\\": "src/"
+            "Hengebytes\\ResponseFilterBundle\\": "src/"
         }
     }
 }

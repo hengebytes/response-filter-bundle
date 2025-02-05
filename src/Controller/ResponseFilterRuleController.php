@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace ResponseFilterBundle\Controller;
+namespace Hengebytes\ResponseFilterBundle\Controller;
 
-use ResponseFilterBundle\Entity\ResponseFilterRule;
-use ResponseFilterBundle\Form\ResponseFilterRuleType;
+use Hengebytes\ResponseFilterBundle\Entity\ResponseFilterRule;
+use Hengebytes\ResponseFilterBundle\Form\ResponseFilterRuleType;
 use Doctrine\ORM\EntityManagerInterface;
 use Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;

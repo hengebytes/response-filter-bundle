@@ -1,8 +1,8 @@
 <?php
 
-namespace ResponseFilterBundle\Entity;
+namespace Hengebytes\ResponseFilterBundle\Entity;
 
-use ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
+use Hengebytes\ResponseFilterBundle\Enum\ResponseFilterRuleTypeEnum;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
