@@ -27,7 +27,7 @@ class ResponseFilterRuleController extends AbstractController
     #[Route('/', name: 'index', methods: ['GET'])]
     public function index(): Response
     {
-        return $this->render('@ResponseFilter/layout.html.twig', [
+        return $this->render('@HBResponseFilter/layout.html.twig', [
             'entities' => $this->entityManager->getRepository(ResponseFilterRule::class)->findAll(),
             'action' => 'response_filter_index',
         ]);
@@ -116,7 +116,7 @@ class ResponseFilterRuleController extends AbstractController
             return $this->redirectToRoute('response_filter_rule_index');
         }
 
-        return $this->render('@ResponseFilter/layout.html.twig', [
+        return $this->render('@HBResponseFilter/layout.html.twig', [
             'action' => 'response_filter_' . $action,
             'entity' => $entity,
             'form' => $form->createView(),

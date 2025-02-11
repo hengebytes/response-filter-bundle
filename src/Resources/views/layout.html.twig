@@ -5,23 +5,23 @@
         <meta charset="utf-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-        <title>{% block page_title %}{{'title.response_filter.index'|trans([], 'bookingEngine')}}{% endblock %}</title>
+        <title>{% block page_title %}Response filter rules{% endblock %}</title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
         <meta name="robots" content="noindex, nofollow"/>
     {% endblock %}
     {% block head_css %}
-        <link href="{{ absolute_url(asset('bundles/responsefilter/css/bootstrap.css')) }}" rel="stylesheet"/>
-        <link href="{{ absolute_url(asset('bundles/responsefilter/css/helpers.css')) }}" rel="stylesheet"/>
+        <link href="{{ absolute_url(asset('bundles/hbresponsefilter/css/bootstrap.css')) }}" rel="stylesheet"/>
+        <link href="{{ absolute_url(asset('bundles/hbresponsefilter/css/helpers.css')) }}" rel="stylesheet"/>
     {% endblock %}
 </head>
 <body>
 {% block content %}
     {% if action is defined and action == "response_filter_index" %}
-        {{ include('@ResponseFilter/index.html.twig') }}
+        {{ include('@HBResponseFilter/index.html.twig') }}
     {% elseif action is defined and action == "response_filter_create" %}
-        {{ include('@ResponseFilter/create.html.twig') }}
+        {{ include('@HBResponseFilter/create.html.twig') }}
     {% elseif action is defined and action == "response_filter_update" %}
-        {{ include('@ResponseFilter/update.html.twig') }}
+        {{ include('@HBResponseFilter/update.html.twig') }}
     {% endif %}
 {% endblock %}
 {% block footer_js %}
